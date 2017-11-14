@@ -19,3 +19,4 @@ pom.xml.asc
 /resources/public/css/
 /config.json
 /config-beta.json
+externs/

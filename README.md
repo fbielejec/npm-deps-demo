@@ -16,7 +16,7 @@ m+x cider-jack-in
 (start!)
 ```
 
-http://localhost:8080
+http://localhost:4000
 
 ## Prod
 

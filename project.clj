@@ -40,9 +40,20 @@
                                    :source-map-timestamp true
                                    :optimizations :none
                                    :closure-defines {goog.DEBUG true}
-                                   :infer-externs true
                                    :install-deps true
                                    :npm-deps {:react "16.0.0"
+                                              :react-helmet "5.2.0"}}}
+
+                       {:id "externs"
+                        :source-paths ["src"]
+                        :compiler {:main "app.core"
+                                   :output-to "externs/app.js"
+                                   :output-dir "externs"
+                                   :optimizations :none
+                                   :infer-externs true
+                                   :install-deps true
+                                   :npm-deps {:express "4.16.2"
+                                              :react "16.0.0"
                                               :react-helmet "5.2.0"}}}
 
                        {:id "min"
@@ -55,9 +66,8 @@
                                    ;; :pseudo-names false
                                    :pseudo-names true
                                    :pretty-print true
-                                   :infer-externs true
                                    :install-deps true
+                                   ;;:externs ["libs/externs.js"]
                                    :npm-deps {:express "4.16.2"
-                                              :html "1.0.0"
                                               :react "16.0.0"
                                               :react-helmet "5.2.0" }}}]})

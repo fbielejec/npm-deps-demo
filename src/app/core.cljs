@@ -2,6 +2,8 @@
   (:require [reagent.core :as reagent]
             [app.views :as views]))
 
+(set! *warn-on-infer* true)
+
 (enable-console-print!)
 
 (defn mount-root []
