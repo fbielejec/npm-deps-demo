@@ -1,6 +1,8 @@
 (ns app.views
   (:require [reagent.core :as reagent]
-            [react-helmet]))
+            [react-helmet]
+            ;;[react-meta-tags]
+            ))
 
 (def meta-tags* (reagent/adapt-react-class (aget react-helmet "default")))
 
@@ -12,8 +14,7 @@
    [:meta {:id "description" :content description}]])
 
 (defn main-panel []
-  (let []
-    (fn []
-      [:div.container
-       [meta-tags]
-       [:h1 "Check for the meta-tags presence"]])))
+  (fn []
+    [:div.container
+     [meta-tags]
+     [:h1 "Check for the meta-tags presence"]]))

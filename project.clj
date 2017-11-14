@@ -41,7 +41,7 @@
                                    :closure-defines {goog.DEBUG true}
                                    :install-deps true
                                    :npm-deps {:react "16.0.0"
-                                              :react-helmet "5.2.0" }}}
+                                              :react-helmet "5.2.0"}}}
 
                        {:id "min"
                         :source-paths ["src"]
@@ -49,8 +49,10 @@
                                    :output-to "resources/public/js/compiled/app.js"
                                    :optimizations :advanced
                                    :closure-defines {goog.DEBUG false}
-                                   :pretty-print false
-                                   :pseudo-names false
+                                   ;; :pretty-print false
+                                   ;; :pseudo-names false
+                                   :pseudo-names true
+                                   :pretty-print true
                                    :install-deps true
                                    :npm-deps {:express "4.16.2"
                                               :html "1.0.0"

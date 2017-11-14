@@ -14,9 +14,9 @@ or
 m+x cider-jack-in
 
 (start!)
+```
 
 http://localhost:8080
-```
 
 ## Prod
 
@@ -25,3 +25,5 @@ lein cljsbuild once min
 
 node server.js
 ```
+
+http://localhost:8080
