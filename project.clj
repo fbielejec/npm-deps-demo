@@ -4,9 +4,12 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojurescript "1.9.946"]
+                 ;;[cljsjs/react-with-addons "15.6.1-0"]
                  [reagent "0.7.0"]]
 
-  :exclusions [[org.clojure/clojure]
+  :exclusions [;;[cljsjs/react]
+               ;;[cljsjs/react-dom]
+               [org.clojure/clojure]
                [org.clojure/clojurescript]]
 
   :plugins [[lein-auto "0.1.2"]
@@ -19,7 +22,7 @@
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 
-  :figwheel {:server-port 8080
+  :figwheel {:server-port 4000
              :css-dirs ["resources/public/css"]}
 
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.8.0"]
@@ -38,7 +41,9 @@
                                    :output-dir "resources/public/js/compiled/out"
                                    :asset-path "js/compiled/out"
                                    :source-map-timestamp true
+                                   :optimizations :none
                                    :closure-defines {goog.DEBUG true}
+                                   :infer-externs true
                                    :install-deps true
                                    :npm-deps {:react "16.0.0"
                                               :react-helmet "5.2.0"}}}
@@ -53,8 +58,9 @@
                                    ;; :pseudo-names false
                                    :pseudo-names true
                                    :pretty-print true
+                                   :infer-externs true
                                    :install-deps true
                                    :npm-deps {:express "4.16.2"
                                               :html "1.0.0"
                                               :react "16.0.0"
-                                              :react-helmet "5.2.0"}}}]})
+                                              :react-helmet "5.2.0" }}}]})

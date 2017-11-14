@@ -1,8 +1,6 @@
 (ns app.views
   (:require [reagent.core :as reagent]
-            [react-helmet]
-            ;;[react-meta-tags]
-            ))
+            [react-helmet]))
 
 (def meta-tags* (reagent/adapt-react-class (aget react-helmet "default")))
 
