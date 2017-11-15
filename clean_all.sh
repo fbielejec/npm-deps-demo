@@ -1,3 +1,7 @@
 #!/bin/bash
 
-rm -r target/ node_modules/ package.json package-lock.json && lein clean
+#rm -r target/
+#rm -r node_modules/
+#rm -r package.json
+#rm -r package-lock.json
+lein clean

@@ -44,18 +44,6 @@
                                    :npm-deps {:react "16.0.0"
                                               :react-helmet "5.2.0"}}}
 
-                       {:id "externs"
-                        :source-paths ["src"]
-                        :compiler {:main "app.core"
-                                   :output-to "externs/app.js"
-                                   :output-dir "externs"
-                                   :optimizations :none
-                                   :infer-externs true
-                                   :install-deps true
-                                   :npm-deps {:express "4.16.2"
-                                              :react "16.0.0"
-                                              :react-helmet "5.2.0"}}}
-
                        {:id "min"
                         :source-paths ["src"]
                         :compiler {:main "app.core"
