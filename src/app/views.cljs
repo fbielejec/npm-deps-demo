@@ -1,6 +1,7 @@
 (ns app.views
   (:require [reagent.core :as reagent]
-            [react-helmet]))
+            [react-helmet]
+            ["@0xproject/connect" :as connect]))
 
 (def meta-tags* (reagent/adapt-react-class (aget react-helmet "default")))
 

@@ -41,7 +41,8 @@
                                    :optimizations :none
                                    :closure-defines {goog.DEBUG true}
                                    :install-deps true
-                                   :npm-deps {:react "16.0.0"
+                                   :npm-deps {"@0xproject/connect" "0.6.2"
+                                              :react "16.0.0"
                                               :react-helmet "5.2.0"}}}
 
                        {:id "min"
